@@ -76,33 +76,35 @@ const Home = () => {
                 </div>
             </section>
             {/* About the programm Section */}
-            <section className="relative h-[350px] md:h-[450px] lg:h-[600px]">
-                <div className="absolute inset-0">
-                    <Image
-                        src="/about.png"  // replace with your background image path
-                        alt="Background Image"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-l from-black/80 to-transparent"></div>
-                </div>
-                <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-end">
-                    <div className="text-white max-w-lg text-right p-6">
-                        <h2 className="text-4xl font-bold mb-4">About the program</h2>
-                        <p className="mb-6">Phasellus nec nunc molestie, aliquam sapien nec, venenatis lacus. Donec efficitur dolor purus, eget congue dolor pretium in.
-                            Quisque tincidunt pulvinar quam vitae tincidunt. Nullam dignissim, ligula et accumsan faucibus, nibh dolor sodales velit, quis maximus augue est at lorem.
-                            Quisque efficitur molestie tellus et sollicitudin. Donec id ligula ultrices, pulvinar arcu in, maximus enim. Phasellus et egestas risus, non tempor est.
-                            Nam eu eros eu neque maximus mollis eget eget nunc. Quisque ornare, odio vitae vulputate tempus, felis massa pulvinar arcu, nec lobortis nisl ligula in libero.
-                            Nulla malesuada lorem et nunc rutrum tincidunt. Suspendisse semper tincidunt magna non aliquam. Donec rutrum hendrerit tellus ac vehicula. Nulla ac posuere mauris.
-                            Aliquam euismod velit sed metus feugiat, vel porta nisi placerat. Nullam vel efficitur risus. Donec vitae lobortis elit.</p>
-                        <button style={{backgroundColor: "#25CFC6"}} className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none">
-                            View More
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <section className="relative min-h-screen py-8">
+    <div className="absolute inset-0">
+        <Image
+            src="/about.png" // replace with your background image path
+            alt="Background Image"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-black/80 to-transparent"></div>
+    </div>
+    <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-end">
+        <div className="text-white max-w-lg text-right p-6 bg-black bg-opacity-50 rounded-lg shadow-lg">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">About the program</h2>
+            <p className="text-sm md:text-base mb-6">
+                Phasellus nec nunc molestie, aliquam sapien nec, venenatis lacus. Donec efficitur dolor purus, eget congue dolor pretium in.
+                Quisque tincidunt pulvinar quam vitae tincidunt. Nullam dignissim, ligula et accumsan faucibus, nibh dolor sodales velit, quis maximus augue est at lorem.
+                Quisque efficitur molestie tellus et sollicitudin. Donec id ligula ultrices, pulvinar arcu in, maximus enim. Phasellus et egestas risus, non tempor est.
+                Nam eu eros eu neque maximus mollis eget eget nunc. Quisque ornare, odio vitae vulputate tempus, felis massa pulvinar arcu, nec lobortis nisl ligula in libero.
+                Nulla malesuada lorem et nunc rutrum tincidunt. Suspendisse semper tincidunt magna non aliquam. Donec rutrum hendrerit tellus ac vehicula. Nulla ac posuere mauris.
+                Aliquam euismod velit sed metus feugiat, vel porta nisi placerat. Nullam vel efficitur risus. Donec vitae lobortis elit.
+            </p>
+            <button style={{ backgroundColor: "#25CFC6" }} className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none">
+                View More
+            </button>
+        </div>
+    </div>
+</section>
             {/* How It Works Section */}
             <section className="py-16 bg-gray-100">
                 <div className="container mx-auto px-4" style={{ width: '70%' }}>
@@ -110,8 +112,8 @@ const Home = () => {
                     <div className="relative">
                         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
                         {steps.map((step, index) => (
-                            <div key={index} className={`flex items-center my-8 ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}>
-                                <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8' : 'pr-8'}`}>
+                            <div key={index} className={`flex flex-col md:flex-row items-center my-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'} mb-4 md:mb-0`}>
                                     <div className="bg-white rounded-lg shadow-lg p-6">
                                         <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                                         <p className="text-gray-600">{step.description}</p>
@@ -127,31 +129,32 @@ const Home = () => {
             </section>
             {/* Ready to be an influancer */}
 
-            <section className="relative h-[350px] md:h-[450px] lg:h-[600px]">
-                <div className="absolute inset-0">
-                    <Image
-                        src="/influance.png"  // replace with your background image path
-                        alt="Background Image"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
-                </div>
-                <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-start">
-                    <div className="text-white max-w-lg text-left p-6">
-                        <h2 className="text-4xl font-bold mb-4">Ready to be an influencer</h2>
-                        <p className="mb-6">Phasellus nec nunc molestie, aliquam sapien nec, venenatis lacus.
-                            Donec efficitur dolor purus, eget congue dolor pretium in.Quisque tincidunt pulvinar quam vitae tincidunt.
-                            Nullam dignissim, ligula et accumsan faucibus, nibh dolor sodales velit, quis maximus augue est at lorem.
-                            Quisque efficitur molestie tellus et sollicitudin. Donec id ligula ultrices, pulvinar arcu in, maximus enim. </p>
-                        <button style={{backgroundColor: "#25CFC6"}} className="bg-customTeal-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none">
-                            Apply Now
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <section className="relative h-[400px] md:h-[450px] lg:h-[600px]">
+    <div className="absolute inset-0">
+        <Image
+            src="/influance.png"  // replace with your background image path
+            alt="Background Image"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+    </div>
+    <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center md:items-center">
+        <div className="text-white max-w-lg text-center md:text-left p-6">
+            <h2 className="text-4xl font-bold mb-4">Ready to be an influencer</h2>
+            <p className="mb-6">Phasellus nec nunc molestie, aliquam sapien nec, venenatis lacus.
+                Donec efficitur dolor purus, eget congue dolor pretium in.Quisque tincidunt pulvinar quam vitae tincidunt.
+                Nullam dignissim, ligula et accumsan faucibus, nibh dolor sodales velit, quis maximus augue est at lorem.
+                Quisque efficitur molestie tellus et sollicitudin. Donec id ligula ultrices, pulvinar arcu in, maximus enim. </p>
+            <button style={{backgroundColor: "#25CFC6"}} className="bg-customTeal-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none">
+                Apply Now
+            </button>
+        </div>
+    </div>
+</section>
+
             {/* program benefit */}
             <ProgramBenefits />
             {/* footer */}
